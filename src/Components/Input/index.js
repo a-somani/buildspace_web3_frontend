@@ -72,7 +72,7 @@ const Input = () => {
       updateStatus("user requested switch")
       await ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: "0x3" }],
+        params: [{ chainId: "0x4" }],
       })
       //updateStatus("user accepted switch")
       //will refresh in app.js because chain changed if accepted, don't need to update status

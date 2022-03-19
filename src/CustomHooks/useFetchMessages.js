@@ -36,6 +36,7 @@ const useFetchMessages = () => {
         const waves = await wavePortalContract.getAllWaves()
         console.log(waves)
         let wavesProcessed = []
+
         waves.forEach((wave, index) => {
           const { waver, timestamp, message } = wave
           let convertedAddress = String(waver)
@@ -53,13 +54,14 @@ const useFetchMessages = () => {
           }
 
           wavesProcessed.push({
-            index: `#${index + 1}`,
+            key: index + 1,
             address: String(waver),
             formatted_address: convertedAddress,
             timestamp: convertedTime,
             message: message,
           })
         })
+        wavesProcessed = wavesProcessed.reverse()
         updateWaves(wavesProcessed)
 
         const userWaves = wavesProcessed.filter(

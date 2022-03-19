@@ -49,6 +49,7 @@ export const UseWave = async () => {
         await waveTxn.wait()
         console.log(new Date() + " Mined...", waveTxn.hash)
         updateTxnStatus("Mined")
+        fetchMessages(true)
         setTimeout(() => {
           updateTxnStatus("")
           hideMessageInput(false)

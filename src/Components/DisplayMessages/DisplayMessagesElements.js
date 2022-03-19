@@ -50,10 +50,10 @@ export const TabOne = styled.div`
   margin: 20px 10px 50px 10px;
 
   overflow: hidden;
-  opacity: ${({ activeTab }) => (activeTab === 0 ? "100%" : "0%")};
+  /* opacity: ${({ activeTab }) => (activeTab === 0 ? "100%" : "0%")};
   transform: ${({ activeTab }) =>
-    activeTab === 0 ? "none" : "translateX(-100%)"};
-  transition: all 0.4s ease-in-out 0s;
+    activeTab === 0 ? "none" : "translateX(-200%)"};
+  transition: all 0.4s ease-in-out 0s; */
   left: 10%;
   width: 80%;
   position: absolute;
@@ -64,7 +64,7 @@ export const TabTwo = styled.div`
   overflow: hidden;
   opacity: ${({ activeTab }) => (activeTab === 1 ? "100%" : "0%")};
   transform: ${({ activeTab }) =>
-    activeTab === 1 ? "none" : "translateX(100%)"};
+    activeTab === 1 ? "none" : "translateX(200%)"};
   transition: all 0.4s ease-in-out 0s;
   right: 10%;
   width: 80%;

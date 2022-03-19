@@ -86,6 +86,47 @@ const DisplayMessages = () => {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
   }
 
+  const allColumns = [
+    {
+      title: "Number",
+      field: "key",
+      width: "1%",
+      type: "numeric",
+    },
+    {
+      title: "Time",
+      field: "timestamp",
+      sorting: false,
+      width: "1%",
+    },
+    { title: "Message", field: "message", sorting: false },
+    {
+      title: "Address",
+      field: "formatted_address",
+      sorting: false,
+      cellStyle: {
+        color: "#1167b1",
+        textDecoration: "underline",
+      },
+    },
+  ]
+
+  const userColumns = [
+    {
+      title: "Number",
+      field: "key",
+      width: "1%",
+      type: "numeric",
+    },
+    {
+      title: "Time",
+      field: "timestamp",
+      sorting: false,
+      width: "1%",
+    },
+    { title: "Message", field: "message", sorting: false },
+  ]
+
   return (
     <Container>
       <div {...handlers}>
@@ -102,23 +143,15 @@ const DisplayMessages = () => {
           <TableWrapper>
             <TabOne activeTab={activeTab}>
               <MaterialTable
-                //style={{ minWidth: "100%" }}
-                title={`All Messages (${totalWaveCount})`}
-                columns={[
-                  { title: "Index", field: "index", defaultSort: "desc" },
-                  { title: "Time", field: "timestamp", sorting: false },
-                  { title: "Message", field: "message", sorting: false },
-                  {
-                    title: "Address",
-                    field: "formatted_address",
-                    sorting: false,
-                    cellStyle: {
-                      color: "#1167b1",
-                      textDecoration: "underline",
-                    },
-                  },
-                ]}
-                data={allWaves}
+                title={
+                  activeTab === 0
+                    ? `All Messages (${totalWaveCount})`
+                    : userWaveCount
+                    ? `Your Messages (${userWaveCount})`
+                    : "You have 0 messages!"
+                }
+                columns={activeTab === 0 ? allColumns : userColumns}
+                data={activeTab === 0 ? allWaves : userWaves}
                 options={{ search: true }}
                 icons={tableIcons}
                 onRowClick={(event, selectedRow) => {
@@ -132,9 +165,9 @@ const DisplayMessages = () => {
                 }}
               />
             </TabOne>
-            <TabTwo activeTab={activeTab}>
+            {/* <TabTwo activeTab={activeTab}>
               <MaterialTable
-                //style={{ minWidth: "100%" }}
+                
                 title={
                   userWaveCount
                     ? `Your Messages (${userWaveCount})`
@@ -142,17 +175,17 @@ const DisplayMessages = () => {
                 }
                 columns={[
                   {
-                    title: "Index",
-                    field: "index",
-                    defaultSort: "desc",
+                    title: "Number",
+                    field: "key",
                     width: "1%",
+                    type: "numeric",
                   },
 
                   { title: "Message", field: "message", sorting: false },
                   {
                     title: "Time",
                     field: "timestamp",
-                    sorting: false,
+                    defaultSort: "desc",
                     width: "1%",
                   },
                 ]}
@@ -160,7 +193,7 @@ const DisplayMessages = () => {
                 options={{ search: true }}
                 icons={tableIcons}
               />
-            </TabTwo>
+            </TabTwo> */}
           </TableWrapper>
         )}
       </div>

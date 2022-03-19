@@ -1,3 +1,16 @@
+# Message from maan-eth
+
+### View this project live at: https://web3database.netlify.app/
+
+This is my first web3 project. It allows anyone to store a message on web3 for free! There is also a database to easily view and search your messages or all messages.
+
+Instructions: Simply setup an account in the metamask browser extension (visit my project and it will redirect you to install it if you don't have it). Get some free testnet eth on the Rinkeby network (ex. https://rinkebyfaucet.com/) and you are ready to send messages.
+
+This was made with the help of a tutorial on buildspace.so
+<br/>
+<br/>
+<br/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -129,17 +129,21 @@ const DisplayMessages = () => {
 
   return (
     <Container>
-      <div {...handlers}>
-        <LeftMenuButton activeTab={activeTab} onClick={() => setActiveTab(0)}>
-          All messages
-        </LeftMenuButton>
-        <RightMenuButton activeTab={activeTab} onClick={() => setActiveTab(1)}>
-          Your messages
-        </RightMenuButton>
-        <MenuActiveBar>
-          <MenuActiveLine activeTab={activeTab} />
-        </MenuActiveBar>
-        {allWaves.length > 1 && (
+      {allWaves.length > 1 && (
+        <div {...handlers}>
+          <LeftMenuButton activeTab={activeTab} onClick={() => setActiveTab(0)}>
+            All messages
+          </LeftMenuButton>
+          <RightMenuButton
+            activeTab={activeTab}
+            onClick={() => setActiveTab(1)}
+          >
+            Your messages
+          </RightMenuButton>
+          <MenuActiveBar>
+            <MenuActiveLine activeTab={activeTab} />
+          </MenuActiveBar>
+
           <TableWrapper>
             <TabOne activeTab={activeTab}>
               <MaterialTable
@@ -195,8 +199,8 @@ const DisplayMessages = () => {
               />
             </TabTwo> */}
           </TableWrapper>
-        )}
-      </div>
+        </div>
+      )}
     </Container>
   )
 }

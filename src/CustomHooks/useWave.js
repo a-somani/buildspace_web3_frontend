@@ -4,7 +4,7 @@ import useWeb3Context from "../Web3StateManagement/Web3Context"
 import { useEffect } from "react"
 
 export const UseWave = async () => {
-  const contractAddress = "0x9003F1766fdC861D033d8c8c6a9A3468Ef33eFc8"
+  const contractAddress = "0x4A4b5C80cb1F983424B866e8835826aa313505ED"
   const contractABI = abi.abi
   const {
     updateTxnMessage,

@@ -7,6 +7,7 @@ import {
   Web3Status,
   SymbolFilled,
   SymbolHollow,
+  HeaderWrapper,
 } from "./HeaderElements"
 import useWeb3Context from "../../Web3StateManagement/Web3Context"
 import { FaRegDotCircle } from "react-icons/fa"
@@ -50,17 +51,19 @@ const Header = () => {
           )}
         </Web3Status>
       </StatusBar>
-      <Title>A Web3 Database</Title>
-      <SubTitle>
-        <h3>Store messages on the blockchain</h3> <p>(For Free!)</p>
-      </SubTitle>
-      <Description>
-        <Textfit className="fitter" mode="multi" max={18}>
-          <b>Instructions:</b> Connect to the Rinkeby testnet with MetaMask and
-          send a message to store on the blockchain
-        </Textfit>
-        <hr />
-      </Description>
+      <HeaderWrapper>
+        <Title>A Web3 Database</Title>
+        <SubTitle>
+          <h3>Store messages on the blockchain</h3> <p>(For Free!)</p>
+        </SubTitle>
+        <Description>
+          <Textfit className="fitter" mode="multi" max={18}>
+            <b>Instructions:</b> Connect to the Goerli testnet with MetaMask and
+            send a message to store on the blockchain
+          </Textfit>
+          <hr />
+        </Description>
+      </HeaderWrapper>
     </>
   )
 }

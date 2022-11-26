@@ -21,6 +21,7 @@ export const MessageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 60px;
+  width:90%;
   @media screen and (max-width: 480px) {
     padding: 10px 15px;
   }
@@ -29,11 +30,15 @@ export const MessageWrapper = styled.div`
 `
 
 export const InputWrapper = styled.div`
+  align-items: center;
+  max-width: 720px;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
-  padding: 0px 30px;
+  padding: 10px 30px;
+  margin-bottom: 60px;
   @media screen and (max-width: 768px) {
-    padding: 0px 15px;
+    padding: 10px 15px;
   }
   @media screen and (max-width: 480px) {
     padding: 10px 15px;
@@ -42,7 +47,7 @@ export const InputWrapper = styled.div`
 
 export const ConnectWallet = styled.button`
   color: white;
-  padding: 10px;
+  padding: 10px 50px;
   background-color: #1167b1;
   font-size: 20px;
   border-radius: 5px;
@@ -55,7 +60,7 @@ export const ConnectWallet = styled.button`
 `
 export const ConnectNetwork = styled(ConnectWallet)`
   color: white;
-  padding: 10px;
+  padding: 10px 50px;
   background-color: #8b0000;
 
   :disabled {
@@ -64,6 +69,6 @@ export const ConnectNetwork = styled(ConnectWallet)`
 `
 export const InstallMM = styled(ConnectWallet)`
   color: white;
-  padding: 10px;
+  padding: 10px 50px;
   background-color: #f4841f;
 `

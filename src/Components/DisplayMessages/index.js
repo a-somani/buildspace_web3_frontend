@@ -163,7 +163,7 @@ const DisplayMessages = () => {
                   //console.log(clicked)
                   if (clicked.includes("...") && clicked.includes("0x")) {
                     window.open(
-                      `//rinkeby.etherscan.io/address/${selectedRow.address}`
+                      `//goerli.etherscan.io/address/${selectedRow.address}`
                     )
                   }
                 }}
@@ -231,7 +231,7 @@ export default DisplayMessages
                 <Address>
                   Address:{" "}
                   <a
-                    href={`//rinkeby.etherscan.io/address/${address}`}
+                    href={`//Goerli.etherscan.io/address/${address}`}
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -65,14 +65,14 @@ const Input = () => {
       }
     }
   }
-  const switchToRinkeby = async () => {
+  const switchToGoerli = async () => {
     setDisableSwitch(true)
     const { ethereum } = window
     try {
       updateStatus("user requested switch")
       await ethereum.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: "0x4" }],
+        params: [{ chainId: "0x5" }],
       })
       //updateStatus("user accepted switch")
       //will refresh in app.js because chain changed if accepted, don't need to update status
@@ -118,18 +118,18 @@ const Input = () => {
         </ConnectWallet>
       ) : (
         network &&
-        network !== "Rinkeby" && (
+        network !== "Goerli" && (
           <ConnectNetwork
             disabled={disableSwitch}
             onClick={() => {
-              switchToRinkeby()
+              switchToGoerli()
             }}
           >
-            {disableSwitch ? "Check Your Wallet" : "Switch to Rinkeby"}
+            {disableSwitch ? "Check Your Wallet" : "Switch to Goerli"}
           </ConnectNetwork>
         )
       )}
-      {enableMessageInput && network === "Rinkeby" && (
+      {enableMessageInput && network === "Goerli" && (
         <MessageWrapper>
           <MessageBox
             rows="5"

@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const handleChainChanged = () => {
       if (userStatus === "user requested switch") {
-        //user requests switch by clicking 'switch to Rinkeby' button in Input component.
+        //user requests switch by clicking 'switch to Goerli' button in Input component.
         console.log("chain change accepted")
         updateStatus("user accepted switch")
         window.location.reload()

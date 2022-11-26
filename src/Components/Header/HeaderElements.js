@@ -2,6 +2,14 @@ import styled from "styled-components"
 import { DotCircle as DotCircleInv } from "@styled-icons/fa-solid/DotCircle"
 import { DotCircle } from "@styled-icons/fa-regular/DotCircle"
 
+export const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0px auto;
+`
+
 export const Title = styled.h1`
   font-weight: 500;
   font-size: 50px;
@@ -118,7 +126,7 @@ export const Web3Status = styled.p`
     --size: 10px;
   }
   .status-icon {
-    color: ${({ network }) => (network === "Rinkeby" ? "#32cd32" : "#F6BE00")};
+    color: ${({ network }) => (network === "Goerli" ? "#32cd32" : "#F6BE00")};
     color: ${({ status }) => status === "Not Connected" && "#8b0000"};
     color: ${({ status }) => status === "User Rejected Approval" && "#8b0000"};
 

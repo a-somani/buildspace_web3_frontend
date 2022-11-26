@@ -67,7 +67,7 @@ const TxDetails = () => {
               <p>
                 The miners are working hard to mine your{" "}
                 <a
-                  href={`//rinkeby.etherscan.io/tx/${txnHash}`}
+                  href={`//Goerli.etherscan.io/tx/${txnHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -86,13 +86,13 @@ const TxDetails = () => {
               <StatusText>
                 Your{" "}
                 <a
-                  href={`//rinkeby.etherscan.io/tx/${txnHash}`}
+                  href={`//Goerli.etherscan.io/tx/${txnHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   transaction
                 </a>{" "}
-                was mined. Your message is now saved on the Rinkeby Network!
+                was mined. Your message is now saved on the Goerli Network!
               </StatusText>
               <StatusText>
                 <em>
